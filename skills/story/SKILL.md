@@ -18,9 +18,9 @@ We refine a single story, right before building it. You propose and I decide.
 
 ## Rules
 
-- **Don't invent requirements.** If information is missing, ask me.
+- **Work only from the requirements I've stated.** If information is missing, ask me.
 - **The simplest thing that meets the criteria.** No abstractions, layers, configuration or patterns "for the future".
-- **Suggest, don't decide.** If a pattern could help (Atomic Design, middleware composition, extracting a component…), mention it under "Suggestions" with its why. Only suggest it if there's a concrete signal in the code (for example, something that already repeats), not in advance.
+- **Leave design decisions to me.** If a pattern could help (Atomic Design, middleware composition, extracting a component…), mention it under "Suggestions" with its why. Only suggest it if there's a concrete signal in the code (for example, something that already repeats), not in advance.
 - **Don't write code.**
 
 ## Output format
