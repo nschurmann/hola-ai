@@ -29,6 +29,8 @@ Each skill's output is the next one's input, as blocks ready to paste into your 
 
 ## Install
 
+### Claude Code
+
 Copy the skill folders into your Claude Code skills directory:
 
 ```bash
@@ -38,7 +40,25 @@ cp -r hola-ai/skills/* ~/.claude/skills/        # all projects
 cp -r hola-ai/skills/* <your-project>/.claude/skills/   # one project
 ```
 
-The skills are only invoked manually (`/backlog`, `/story`, `/pair`), never automatically.
+### OpenCode
+
+Copy the skills and the commands into your OpenCode config:
+
+```bash
+git clone https://github.com/nschurmann/hola-ai.git
+
+# all projects
+mkdir -p ~/.config/opencode/skills ~/.config/opencode/commands
+cp -r hola-ai/skills/* ~/.config/opencode/skills/
+cp hola-ai/opencode/commands/*.md ~/.config/opencode/commands/
+
+# one project
+mkdir -p <your-project>/.opencode/skills <your-project>/.opencode/commands
+cp -r hola-ai/skills/* <your-project>/.opencode/skills/
+cp hola-ai/opencode/commands/*.md <your-project>/.opencode/commands/
+```
+
+In both harnesses the skills are only invoked manually (`/backlog`, `/story`, `/pair`), never automatically.
 
 Or ask your agent to install these skills!
 
