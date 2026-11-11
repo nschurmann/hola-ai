@@ -29,7 +29,7 @@ Each skill's output is the next one's input, as blocks ready to paste into your 
 
 ## Install
 
-Copy the skill folders into your Claude Code skills directory:
+Copy the skill folders into your agent's skills directory (shown for Claude Code):
 
 ```bash
 git clone https://github.com/nschurmann/hola-ai.git

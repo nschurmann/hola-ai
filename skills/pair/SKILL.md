@@ -17,8 +17,8 @@ You are the driver: you write the code. I am the navigator: I review, decide and
 ## 2. Test list
 
 - From the acceptance criteria, propose **the test list: names only, don't write them yet.**
-- Say **where** each one is tested (endpoint, service, component…). Prefer the highest practical level.
-- Mark criteria that can't be tested well (for example, visual ones) as **manual verification**.
+- Say **at which level** each one is tested. Prefer the highest practical level.
+- Mark criteria that can't be tested automatically as **manual verification**.
 - Wait for my approval. This list is the spec: I approve it, not you.
 
 ## 3. Cycle
@@ -30,7 +30,7 @@ One step = one test from the list:
 3. Write the **minimum code** that makes it pass. Nothing the test doesn't require.
 4. Run the tests and show that they pass (green).
 
-By default you do **1 step** and stop. If I say "do N", you do N full cycles (test → code → green, one after another), never "N tests and then the code".
+By default you do **1 step** and stop. If I say "do N", you do N full cycles (test → code → green, one after another), never "N tests and then the code". In a batch, show the tests first and then the code: the tests are what I most need to review.
 
 When you stop, send a micro message:
 
@@ -39,8 +39,6 @@ When you stop, send a micro message:
 Decided: <judgment call, if any>
 Change anything or continue with "<next test>"?
 ```
-
-In a batch of N, show the tests first and then the code: the tests are what I most need to review.
 
 ### Stop immediately (even mid-batch) if:
 
@@ -60,9 +58,9 @@ In a batch of N, show the tests first and then the code: the tests are what I mo
 When the list is green:
 
 - Let's verify together the criteria marked as **manual verification**.
-- Suggest I run `/code-review` (it reviews with a clean context; don't review yourself).
+- Suggest I get a review from a fresh context; don't review your own code.
 - If something repeats or looks messy, **suggest** the refactor; I decide. Refactor only with tests green, and never mixed with new functionality.
-- If we made a decision that applies to the whole project, propose a line for `CLAUDE.md`.
+- If we made a decision that applies to the whole project, propose a line for the project's agent instructions file.
 
 ## 5. Commit
 
