@@ -62,6 +62,12 @@ When the list is green:
 - If something repeats or looks messy, **suggest** the refactor; I decide. Refactor only with tests green, and never mixed with new functionality.
 - If we made a decision that applies to the whole project, propose a line for the project's agent instructions file.
 
+### Adversarial testing handoff
+
+- Once all tests are green, suggest running `/adversarial` in a separate session to challenge the implemented behavior beyond the acceptance criteria.
+- Never invoke `/adversarial`, generate adversarial tests, or expand the approved test list automatically. I decide whether to proceed.
+- If `/adversarial` reports findings, present them to me first. Only after my approval, turn the selected findings into new test cases and address them through the normal TDD cycle (red → green). Never silently change the original acceptance criteria or scope.
+
 ## 5. Commit
 
 **Never commit.** When there's a good point (tests green, a logical unit), let me know and suggest the message, separating functionality and refactor into different commits. I make the commit.
